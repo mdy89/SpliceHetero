@@ -33,7 +33,7 @@ def main():
 	print "STEP_3: sITH Calculation... [%s]"%GET_TIME()
 	UnitHandler = GenUnitHandler(ArgumentParser, InputHandler)
 
-	#[4] 
+	#[4]
 	print "Completed [%s]"%GET_TIME()
 	##End main
 
@@ -263,7 +263,7 @@ class GenUnitHandler(object):
 		if jobObj.Index_int == 0:
 			self.Count_file.write(jobObj.Count_file.readline())
 			self.Distance_file.write(jobObj.Distance_file.readline())
-			head_line = makeLine(["Chromosome", "Shared_site", "Fixed_sites"], tt)
+			head_line = makeLine(["Chromosome", "Shared_site[1-based]", "Fixed_sites[1-based]"], tt)
 		else:
 			jobObj.Count_file.readline()
 			jobObj.Distance_file.readline()
@@ -336,7 +336,7 @@ class GenUnitHandler(object):
 		self.Distance_path = self.Unit_dir + ss + "%s.sITH_REGIONS.txt"%self.Job_name
 		self.Distance_file = open(self.Distance_path, 'w')
 		self.Name_list = map(lambda x:x.Name_str, self.Case_list)
-		self.Head_line = makeLine(["Chromosome", "Shared_site", "Alternative_sites", "Strand"] + self.Name_list, tt)
+		self.Head_line = makeLine(["Chromosome", "Shared_site[1-based]", "Alternative_sites[1-based]", "Strand"] + self.Name_list, tt)
 		self.Distance_file.write(self.Head_line + nn)
 
 		#[3]
