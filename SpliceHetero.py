@@ -34,7 +34,7 @@ def main():
 	UnitHandler = GenUnitHandler(ArgumentParser, InputHandler)
 
 	#[4]
-	print "=> Completed [%s]"%GET_TIME()
+	print "Completed [%s]"%GET_TIME()
 	##End main
 
 class GenArgumentParser(object):
@@ -48,7 +48,7 @@ class GenArgumentParser(object):
 		self.CheckHandler_method()
 
 		#[3]
-		self.Out_dir = self.Handler_obj.out_directory_path
+		self.Out_dir = self.Handler_obj.out_directory_path; makePath(self.Out_dir)
 		self.ArgumentExport_method()
 		##End init
 	
@@ -140,6 +140,10 @@ class GenInputHandler(object):
 			sampleObj.Junction_path = junction_path
 			self.Ref_list.append(sampleObj)
 			##End for
+
+		#[3]
+		a, b = map(len, [self.Case_list, self.Ref_list])
+		print " - CASE:%s, REF:%s samples are registered [%s]"%(a, b, GET_TIME())
 		##End SampleRegister_method
 	##End GenInputHandler
 
@@ -293,8 +297,8 @@ class GenUnitHandler(object):
 			procObj = mp.Process(target=self.JobProcess_method, args=argVect)
 			procObj.start(); self.Process_list.append(procObj)
 			if (self.Hash_index-1) in self.HASH_flag_list:
-				HASH_percentile = float(self.Hash_index)/len(self.Hash_index_list) * 100
-				print "  %.2f%% of jobs are being processed... [%s]"%(HASH_percentile, GET_TIME())
+				a, b = self.Hash_index, len(self.Hash_line_list)
+				print " - %s/%s jobs are being processed... [%s]"%(a, b, GET_TIME())
 				##End if
 			##End for
 
@@ -460,7 +464,7 @@ class GenUnitHandler(object):
 		self.Count_path = self.Unit_dir + ss + "%s.COUNT_REGIONS.txt"%self.Job_name
 		self.Count_file = open(self.Count_path, 'w')
 		self.Name_list = map(lambda x:x.Name_str, self.Sample_list)
-		self.Head_line = makeLine(["Chromosome", "Shared_site", "Alternative_sites", "Strand"] + self.Name_list, tt)
+		self.Head_line = makeLine(["Chromosome", "Shared_site[1-based]", "Alternative_sites[1-based]", "Strand"] + self.Name_list, tt)
 		self.Count_file.write(self.Head_line + nn)
 
 		#[2]
