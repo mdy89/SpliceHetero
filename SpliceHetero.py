@@ -163,7 +163,6 @@ class GenUnitHandler(object):
 		makePath(self.Out_dir); makePath(self.Unit_dir)
 
 		#[3]
-		print "STEP_3_1: Process Managing... [%s]"%GET_TIME()
 		self.HashExtract_method()
 
 		#[4]
