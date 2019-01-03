@@ -1,6 +1,4 @@
-# SpliceHetero
-SpliceHetero: An information theoretic model for measuring spliceomic intratumor heterogeneity from bulk-tumor RNA-seq
-
+#### SpliceHetero: An information theoretic model for measuring spliceomic intratumor heterogeneity from bulk-tumor RNA-seq #####
 ** Version 1.0. [2019-01-03]
 
 
