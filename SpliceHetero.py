@@ -33,7 +33,7 @@ def main():
 	print "STEP_3: sITH Calculation... [%s]"%GET_TIME()
 	UnitHandler = GenUnitHandler(ArgumentParser, InputHandler)
 
-	#[4]
+	#[4] 
 	print "Completed [%s]"%GET_TIME()
 	##End main
 
