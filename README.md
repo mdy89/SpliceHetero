@@ -13,9 +13,9 @@
 
 Essemtial Arguments:
 
-'-csp', '--Case_Sample_path' [PATH]             List of case-sample input (see web-page for more input format)
+'-csp', '--Case_Sample_path' [PATH]             List of case-sample input (see CANCER_SAMPLES.txt for more input format)
 
-'-rsp', '--Reference_Sample_path' [PATH]                List of reference-sample input (see web-page for more input format)
+'-rsp', '--Reference_Sample_path' [PATH]                List of reference-sample input (see NORMAL_SAMPLES.txt for more input format)
 
 '-odp', '--Out_Dir_path' [PATH]         Directory path for output'
 
