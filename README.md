@@ -30,4 +30,10 @@ Optional Arguments:
 sh run.test.sh
 
 
+4. Contact: mdy89@snu.ac.kr
+
+
+5. Web-page: http://biohealth.snu.ac.kr/software/SpliceHetero
+
+
 
