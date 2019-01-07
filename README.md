@@ -26,13 +26,12 @@ Optional Arguments:
 '-slb', '--Stranded_Library_bool' [BOOL]                If it is stranded library (options: True/False, default: False)'
 
 
-3. Test code: sh run.test.sh
+#### Please see run.test.sh for more detailed usage
+
+3. Contact: mdy89@snu.ac.kr
 
 
-4. Contact: mdy89@snu.ac.kr
-
-
-5. Web-page: http://biohealth.snu.ac.kr/software/SpliceHetero
+4. Web-page: http://biohealth.snu.ac.kr/software/SpliceHetero
 
 
 
