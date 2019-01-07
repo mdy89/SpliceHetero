@@ -26,8 +26,7 @@ Optional Arguments:
 '-slb', '--Stranded_Library_bool' [BOOL]                If it is stranded library (options: True/False, default: False)'
 
 
-3. Test-data: please type following command for testing
-sh run.test.sh
+3. Test code: sh run.test.sh
 
 
 4. Contact: mdy89@snu.ac.kr
