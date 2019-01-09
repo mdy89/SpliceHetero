@@ -34,4 +34,7 @@ Optional Arguments:
 4. Web-page: http://biohealth.snu.ac.kr/software/SpliceHetero
 
 
+5. Git-page: https://github.com/mdy89/SpliceHetero
+
+
 
