@@ -78,8 +78,8 @@ class GenArgumentParser(object):
 		#[2]
 		self.Message_list.append("Usage: python SpliceHetero.py [arguments]")
 		self.Message_list.append("\nEssemtial Arguments:")
-		self.Message_list.append("'-csp', '--Case_Sample_path' [PATH]\t\tList of case-sample input (see web-page for more input format)")
-		self.Message_list.append("'-rsp', '--Reference_Sample_path' [PATH]\t\tList of reference-sample input (see web-page for more input format)")
+		self.Message_list.append("'-csp', '--Case_Sample_path' [PATH]\t\tList of case-sample input (see CANCER_SAMPLES.txt for input format)")
+		self.Message_list.append("'-rsp', '--Reference_Sample_path' [PATH]\t\tList of reference-sample input (see NORMAL_SAMPLES.txt for input format)")
 		self.Message_list.append("'-odp', '--Out_Dir_path' [PATH]\t\tDirectory path for output'")
 		
 		#[3]
@@ -123,6 +123,9 @@ class GenInputHandler(object):
 		self.Case_list = []; self.Case_idx = 0
 		self.Case_path = self.Handler_obj.case_sample_path
 		for case_line in open(self.Case_path):
+			if case_line.strip()[0] == "#":
+				continue
+				##End if
 			sample_name, junction_path = case_line.split()[:2]
 			sampleObj = GenSampleObject()
 			sampleObj.Name_str = sample_name
@@ -134,6 +137,9 @@ class GenInputHandler(object):
 		self.Ref_list = []; self.Ref_idx = 0
 		self.Ref_path = self.Handler_obj.reference_sample_path
 		for ref_line in open(self.Ref_path):
+			if ref_line.strip()[0] == "#":
+				continue
+				##End if
 			sample_name, junction_path = ref_line.split()[:2]
 			sampleObj = GenSampleObject()
 			sampleObj.Name_str = sample_name
