@@ -36,5 +36,10 @@ Optional Arguments:
 
 5. Git-page: https://github.com/mdy89/SpliceHetero
 
+6. Citation: Please cite the following article
+
+Kim, Minsu, et al. "SpliceHetero: An information theoretic approach for measuring spliceomic intratumor heterogeneity from bulk tumor RNA-seq." PloS one 14.10 (2019).
+
+
 
 
