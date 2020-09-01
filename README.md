@@ -28,7 +28,7 @@ Optional Arguments:
 
 #### Please see run.test.sh for more detailed usage
 
-3. Contact: mdy89@snu.ac.kr
+3. Contact: mindoly89@gmail.com
 
 
 4. Web-page: http://biohealth.snu.ac.kr/software/SpliceHetero
